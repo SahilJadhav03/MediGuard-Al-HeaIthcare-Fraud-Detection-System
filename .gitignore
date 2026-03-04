@@ -1,0 +1,53 @@
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.env
+
+# ── Data backups (never commit .bak files) ────────────────────
+data/raw/*.bak_*.csv
+data/simulated/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Node / Frontend ───────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+*.log
+npm-debug.log*
+
+# ── IDE / OS ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Kaggle credentials (NEVER commit) ─────────────────────────
+kaggle.json
+.kaggle/
+
+# ── Model artefacts (large – use Git LFS if needed) ──────────
+# Uncomment the lines below if you do NOT want to commit model PKLs:
+# models/*.pkl
+# model_benchmarks/**/predictions.csv
+
+# ── Misc ──────────────────────────────────────────────────────
+*.tmp
+*.bak

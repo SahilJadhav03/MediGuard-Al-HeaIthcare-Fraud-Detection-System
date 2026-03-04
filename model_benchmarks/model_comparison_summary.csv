@@ -1,0 +1,5 @@
+Model,accuracy,precision,recall,f1,roc_auc,pr_auc,best_threshold,cv_roc_auc_mean,cv_roc_auc_std,inference_ms,tp,fp,tn,fn
+Random Forest,1.0,1.0,1.0,1.0,1.0,1.0,0.22,1.0,0.0,30.93,101,0,981,0
+XGBoost,1.0,1.0,1.0,1.0,1.0,1.0,0.1,1.0,0.0,2.56,101,0,981,0
+LightGBM,1.0,1.0,1.0,1.0,1.0,1.0,0.1,1.0,0.0,23.91,101,0,981,0
+Logistic Regression,1.0,1.0,1.0,1.0,1.0,1.0,0.1,1.0,0.0,2.46,101,0,981,0

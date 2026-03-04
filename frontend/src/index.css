@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #141416;
+  --color-dark-panel: #1C1C21;
+  --color-dark-card: #24242B;
+  --color-dark-border: #33333C;
+  --color-brand-primary: #6C5CE7;
+  --color-brand-secondary: #8C7EEB;
+  --color-brand-success: #00B894;
+  --color-brand-danger: #FF7675;
+  --color-brand-warning: #FDCB6E;
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-dark-panel border border-dark-border rounded-2xl shadow-lg;
+  }
+
+  .glass-card {
+    @apply bg-dark-card border border-dark-border rounded-xl shadow-md transition-all duration-200 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .nav-item {
+    @apply flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-400 font-medium transition-colors hover:bg-dark-card hover:text-white cursor-pointer;
+  }
+
+  .nav-item.active {
+    @apply bg-brand-primary/10 text-brand-primary border-l-4 border-brand-primary rounded-l-none pl-3;
+  }
+}
+
+body {
+  @apply bg-dark-bg text-gray-200 font-sans antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #33333C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A4A55;
+}

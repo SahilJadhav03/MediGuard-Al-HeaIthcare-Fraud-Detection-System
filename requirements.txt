@@ -1,0 +1,66 @@
+# ============================================================
+# MediGuard AI — Healthcare Fraud Detection System
+# Python Requirements  (pip install -r requirements.txt)
+# Tested on: Python 3.13  |  Windows 11 / Ubuntu 22.04
+# ============================================================
+
+# ── API Backend ─────────────────────────────────────────────
+fastapi==0.128.1            # REST API framework
+uvicorn==0.40.0             # ASGI server with hot-reload
+pydantic==2.12.5            # Data validation for FastAPI
+python-multipart==0.0.22    # File upload support (batch predict)
+httpx==0.28.1               # Async HTTP client (optional, for testing)
+watchfiles==1.1.1           # File watcher for uvicorn --reload
+
+# ── Machine Learning ─────────────────────────────────────────
+scikit-learn==1.8.0         # Core ML: preprocessing, metrics, cross-val
+xgboost==3.2.0              # XGBoost classifier
+lightgbm==4.6.0             # LightGBM (production model — IRDAI recommended)
+imbalanced-learn==0.14.1    # SMOTENC oversampling for fraud class imbalance
+
+# ── Data Processing & Analysis ───────────────────────────────
+pandas==2.3.3               # DataFrame operations
+numpy==2.2.6                # Numerical computing
+scipy==1.16.3               # Statistical functions
+joblib==1.5.3               # Model serialisation / parallel processing
+
+# ── Visualisation ────────────────────────────────────────────
+matplotlib==3.10.7          # Static plots (feature importance, confusion matrix)
+seaborn==0.13.2             # Statistical visualisation
+plotly==6.6.0               # Interactive charts (benchmark plots)
+
+# ── Dataset Download ─────────────────────────────────────────
+kagglehub==1.0.0            # Download Kaggle datasets programmatically
+                            # Setup: place kaggle.json in ~/.kaggle/
+                            # or set KAGGLE_USERNAME & KAGGLE_KEY env vars
+
+# ============================================================
+# FRONTEND SETUP (Node.js 18+)
+# ============================================================
+# cd frontend
+# npm install          ← installs all dependencies from package.json
+# npm run dev          ← starts Vite dev server on http://localhost:5177
+#
+# Key frontend packages (auto-installed via npm):
+#   react 19          – UI framework
+#   vite 7            – build tool & dev server
+#   tailwindcss 4     – utility CSS
+#   recharts 3        – charts & gauges
+#   lucide-react      – icons
+#   axios             – HTTP client for API calls
+#   framer-motion     – animations
+
+# ============================================================
+# QUICK START
+# ============================================================
+# 1. pip install -r requirements.txt
+# 2. python run_pipeline.py          ← preprocess raw data
+# 3. python benchmark_models.py      ← train & evaluate all models
+# 4. python api_server.py            ← start backend on :8000
+# 5. cd frontend && npm install && npm run dev  ← start UI on :5177
+#
+# Optional: Download fresh Kaggle dataset before step 2:
+#   python download_and_retrain.py
+#
+# Optional: Run test suite:
+#   python generate_test_cases.py

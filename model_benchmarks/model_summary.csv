@@ -1,0 +1,5 @@
+,accuracy,precision,recall,f1,roc_auc,pr_auc,best_threshold,cv_accuracy_mean,cv_accuracy_std,cv_precision_mean,cv_precision_std,cv_recall_mean,cv_recall_std,cv_f1_mean,cv_f1_std,cv_roc_auc_mean,cv_roc_auc_std,training_time
+random_forest,1.0,1.0,1.0,1.0,1.0,1.0,0.1,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,0.16497254371643066
+xgboost,1.0,1.0,1.0,1.0,1.0,1.0,0.1,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,0.23100066184997559
+logistic_regression,1.0,1.0,1.0,1.0,1.0,1.0,0.1,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,0.023999452590942383
+lightgbm,1.0,1.0,1.0,1.0,1.0,1.0,0.1,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,0.061612844467163086
